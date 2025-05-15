@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Token from "./Token";
 
 const CommentsList = ({ comments }) => (
   <div className="mt-3">
@@ -41,8 +42,7 @@ class CommentArea extends Component {
         `https://striveschool-api.herokuapp.com/api/comments/${this.props.asin}`,
         {
           headers: {
-            Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODE0N2I4OTFjMjUwNDAwMTUxYWI2NTUiLCJpYXQiOjE3NDczMTUwNTUsImV4cCI6MTc0ODUyNDY1NX0.OSgVH3QMDHeEuHs2uFihOC8DkMSuAM9sGfFWMrXHigQ",
+            Authorization: Token,
           },
         }
       );
