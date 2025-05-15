@@ -12,6 +12,7 @@ const AllTheBooks = function () {
   const [books, setBooks] = useState(fantasy);
   const [category, setCategory] = useState("Fantasy");
   const [cartCount, setCart] = useState(0);
+  const [selectedBookAsin, setSelectedBookAsin] = useState(null);
 
   const BookSelected = (newBooks, newCategory) => {
     setBooks(newBooks);
@@ -58,7 +59,12 @@ const AllTheBooks = function () {
           </Button>
         </div>
 
-        <BookList books={books} addToCart={addToCart} />
+        <BookList
+          books={books}
+          addToCart={addToCart}
+          selectedBookAsin={selectedBookAsin}
+          setSelectedBookAsin={setSelectedBookAsin}
+        />
       </Container>
     </>
   );

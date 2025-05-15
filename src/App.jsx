@@ -11,7 +11,6 @@ function App() {
     <>
       <MyNav />
       <Welcome />
-
       <AllTheBooks />
       <Myfooter />
     </>
